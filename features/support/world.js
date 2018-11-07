@@ -13,6 +13,7 @@ class AddressBookWorld {
     this.page = await this.browser.newPage()
     await this.page.goto(HOME_PAGE)
   }
+
   async closeHomePage() {
     await this.browser.close()
   }
@@ -23,6 +24,13 @@ class AddressBookWorld {
 
     expect(actualContent).to.be.eq(expectedContent)
   }
+
+  async clickOnAddContactBtn() {
+    const btnSelector = '.add-contact'
+    await this.page.waitForSelector(btnSelector)
+    await this.page.click(btnSelector)
+  }
+  
 }
 
 setWorldConstructor(AddressBookWorld)
