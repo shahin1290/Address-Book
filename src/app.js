@@ -1,7 +1,6 @@
-
+const storage = window.localStorage
 const renderContacts = () => {
-  const storage = window.localStorage
-  // Read all the contacts from the storage
+
   const contacts = JSON.parse(storage.getItem('contacts'))
 
   // Select the container we will use to list the contacts 
@@ -57,7 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
       event.preventDefault()
 
       const storage = window.localStorage
- 
+      // const contacts = JSON.parse(storage.getItem('contacts'))
+
+
       // Get all inputs elements from the form
       const {
         name,
@@ -79,9 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
         twitter: twitter.value,
       }
   
-    console.log(`Saving the following contact: ${JSON.stringify(contact)}`)
-    storage.setItem('contacts', JSON.stringify([contact]))
+    // console.log(`Saving the following contact: ${JSON.stringify(contact)}`)
+    let contacts = JSON.parse(storage.getItem('contacts')) || []
+
+    contacts.push(contact)
+
+    storage.setItem('contacts', JSON.stringify(contacts))
+    // storage.setItem('contacts', JSON.stringify([contact]))
     renderContacts()
+
+    addContactForm.reset()
 
     })
    
