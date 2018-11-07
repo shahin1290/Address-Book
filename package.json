@@ -1,0 +1,8 @@
+{
+  "name": "address-book",
+  "version": "1.0.0",
+  "description": "Address Book Application",
+  "main": "index.js",
+  "author": "Aditya Naik <naik.aditya@gmail.com>",
+  "license": "MIT"
+}
