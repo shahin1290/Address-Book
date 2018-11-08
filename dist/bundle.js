@@ -1,1 +1,101 @@
-!function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t,n){"use strict";var r=window.localStorage,o=function(){var e=JSON.parse(r.getItem("contacts")),t=document.querySelector(".contact-list");if(e){t.innerHTML="";var n=document.createElement("ul");e.forEach(function(e){var t=document.createElement("li");t.innerHTML='\n        <div class="card">\n          <div class="image">\n            <img src="https://ca-address-book.herokuapp.com/images/pine.jpg" />\n          </div>\n          <div class="content">\n            <h1>'+e.name+"</h1>\n            <h2>"+e.company+"</h2>\n            <p>"+e.notes+"</p> \n            "+e.email+' | \n            <a href="https://www.twitter.com/'+e.twitter+'">@'+e.twitter+"</a>\n          </div>\n        </div>\n     ",n.appendChild(t)}),t.appendChild(n)}else t.innerHTML="<p>You have no contacts in your address book</p>"};document.addEventListener("DOMContentLoaded",function(){o();var e=document.querySelector(".new-contact-form");e.addEventListener("submit",function(t){t.preventDefault();var n=window.localStorage,r=e.elements,a=r.name,i=r.email,c=r.phone,u=r.company,l=r.notes,s=r.twitter,d={id:Date.now(),name:a.value,email:i.value,phone:c.value,company:u.value,notes:l.value,twitter:s.value},p=JSON.parse(n.getItem("contacts"))||[];p.push(d),n.setItem("contacts",JSON.stringify(p)),o(),e.reset()})})}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/app.js":
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar storage = window.localStorage;\nvar renderContacts = function renderContacts() {\n\n  var contacts = JSON.parse(storage.getItem('contacts'));\n\n  // Select the container we will use to list the contacts \n  var div = document.querySelector('.contact-list');\n\n  if (contacts) {\n    div.innerHTML = '';\n\n    // render the contacts\n    var ul = document.createElement('div');\n    ul.className += 'flex';\n    // For every contact in our array of contacts, we will\n    // create a li element that will contain a card with\n    // all the information of the contact\n    contacts.forEach(function (contact) {\n      var li = document.createElement('div');\n      li.className += 'flex-1';\n      li.innerHTML = '\\n        <div class=\"card max-w-sm rounded overflow-hidden shadow-lg\">\\n          <div class=\"content\">\\n            <h1>' + contact.name + '</h1>\\n            <h2>' + contact.company + '</h2>\\n            <p>' + contact.notes + '</p> \\n            ' + contact.email + ' | \\n            <a href=\"https://www.twitter.com/' + contact.twitter + '\">@' + contact.twitter + '</a>\\n          </div>\\n        </div>\\n     ';\n      // Add the contact's li to the unordered list we created earlier\n      ul.appendChild(li);\n    });\n\n    // Lastly, append the list to the contact-list container.\n    div.appendChild(ul);\n  } else {\n    div.innerHTML = '<p>You have no contacts in your address book</p>';\n  }\n};\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  renderContacts();\n\n  // Select form object from the DOM\n  var addContactForm = document.querySelector('.new-contact-form');\n\n  // Register an event to listen for form submission\n  addContactForm.addEventListener('submit', function (event) {\n    // Disable default behavior when submitting form\n    event.preventDefault();\n\n    var storage = window.localStorage;\n    // const contacts = JSON.parse(storage.getItem('contacts'))\n\n\n    // Get all inputs elements from the form\n    var _addContactForm$eleme = addContactForm.elements,\n        name = _addContactForm$eleme.name,\n        email = _addContactForm$eleme.email,\n        phone = _addContactForm$eleme.phone,\n        company = _addContactForm$eleme.company,\n        notes = _addContactForm$eleme.notes,\n        twitter = _addContactForm$eleme.twitter;\n\n    // Create contact object\n\n    var contact = {\n      id: Date.now(),\n      name: name.value,\n      email: email.value,\n      phone: phone.value,\n      company: company.value,\n      notes: notes.value,\n      twitter: twitter.value\n\n      // console.log(`Saving the following contact: ${JSON.stringify(contact)}`)\n    };var contacts = JSON.parse(storage.getItem('contacts')) || [];\n\n    contacts.push(contact);\n\n    storage.setItem('contacts', JSON.stringify(contacts));\n    // storage.setItem('contacts', JSON.stringify([contact]))\n    renderContacts();\n\n    addContactForm.reset();\n  });\n});\n\n//# sourceURL=webpack:///./src/app.js?");
+
+/***/ })
+
+/******/ });
