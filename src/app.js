@@ -59,9 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const storage = window.localStorage
       // const contacts = JSON.parse(storage.getItem('contacts'))
 
-      document.querySelector('#form-wrapper').className -= 'invisible'
-      document.querySelector('#add-contact-wrapper').className += 'invisible'
-      
+    
+
+      document.querySelector('#form-wrapper').className += 'invisible'
+      document.querySelector('#add-contact-wrapper').className -= 'invisible'
+
+   
+
       // Get all inputs elements from the form
       const {
         name,
