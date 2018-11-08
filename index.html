@@ -20,21 +20,39 @@
   <div class="contact-list  flex-row h-auto p-10 border border-solid border-black ">
   </div>
 
-  <form class="new-contact-form" action="#">
-    <label for="name">Name</label>
-    <input id="contact-name" name="name" type="text">
-    <label for="email">Email</label>
-    <input id="contact-email" name="email" type="email">
-    <label for="phone">Phone</label>
-    <input id="contact-phone" name="phone" type="text">
-    <label for="company">Company</label>
-    <input id="contact-company" name="company" type="text">
-    <label for="notes">Notes</label>
-    <textarea id="contact-notes" name="notes" type="text"></textarea>
-    <label for="twitter">Twitter</label>
-    <input id="contact-twitter" name="twitter" type="text">
-    <input class="save-contact" type="submit" value="Save contact">
-  </form>
+
+  <div class="w-full">
+    <form class="new-contact-form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="#"></form>
+
+      <div class="flex flex-row -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block text-grey-darker text-sm font-bold mb-2" for="name">Name</label>
+            <input class= "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="contact-name" name="name" type="text">
+        </div>
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block text-grey-darker text-sm font-bold mb-2" for="email">Email</label>
+            <input class= "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="contact-email" name="email" type="email">
+        </div>
+      <div>
+      
+      <label class="block text-grey-darker text-sm font-bold mb-2" for="phone">Phone</label>
+      <input class= "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="contact-phone" name="phone" type="text">
+      
+      <label class="block text-grey-darker text-sm font-bold mb-2" for="company">Company</label>
+      <input class= "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="contact-company" name="company" type="text">
+      
+      <label class="block text-grey-darker text-sm font-bold mb-2" for="notes">Notes</label>
+      <textarea class= "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="contact-notes" name="notes" type="text"></textarea>
+      
+      <label class="block text-grey-darker text-sm font-bold mb-2" for="twitter">Twitter</label>
+      <input class= "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="contact-twitter" name="twitter" type="text">
+      
+      <input class="save-contact bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="Save contact">
+    
+    </form>
+
+  </div>
+  
 
   <script src="./dist/bundle.js"></script>
 </body>
