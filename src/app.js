@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.add-contact').addEventListener('click', function(){
       document.querySelector('#form-wrapper').className -= 'invisible'
-      document.querySelector('#add-contact-wrapper').className += 'invisible'
+      document.querySelector('#add-contact-wrapper').className = 'invisible'
     })
 
     // Select form object from the DOM
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
 
-      document.querySelector('#form-wrapper').className += 'invisible'
+      document.querySelector('#form-wrapper').className = 'invisible'
       document.querySelector('#add-contact-wrapper').className -= 'invisible'
 
    
