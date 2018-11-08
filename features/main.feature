@@ -6,7 +6,7 @@ Feature: Create contacts
 
   Scenario: Create a new contact
     Given I visit the site
-    Then I should see "Contacts"
+    Then I should see "Address Book"
     And I should see "You have no contacts in your address book"
     When I click "Add contact"
     Then I fill in "Name" with "John Doe"
@@ -22,7 +22,7 @@ Feature: Create contacts
 
   Scenario: User creates multiple contacts
     Given I visit the site
-    Then I should see "Contacts"
+    Then I should see "Address Book"
     And I should see "You have no contacts in your address book"
     When I click "Add contact"
     Then I fill in "Name" with "John Doe"

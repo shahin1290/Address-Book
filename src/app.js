@@ -17,13 +17,13 @@ const renderContacts = () => {
     // all the information of the contact
     contacts.forEach(contact => {
       let li = document.createElement('div')
-      li.className += 'flex-1 p-5'
+      li.className += 'flex-1 p-5 border-l-4 border-solid border-black hover:bg-grey-darker m-5'
       li.innerHTML = `
-        <div class="card max-w-sm rounded overflow-hidden shadow-lg">
-          <div class="content">
-            <h1>${ contact.name }</h1>
-            <h2>${ contact.company }</h2>
-            <p>${ contact.notes }</p> 
+        <div class="card max-w-sm rounded overflow-hidden shadow-lg bg-grey">
+          <div class="content m-1 ">
+            <h1 class= "m-1 underline">${ contact.name }</h1>
+            <h2 class= "m-1">${ contact.company }</h2>
+            <p class= "m-1">${ contact.notes }</p> 
             ${ contact.email } | 
             <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
           </div>
