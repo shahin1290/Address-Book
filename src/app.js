@@ -43,11 +43,14 @@ const renderContacts = () => {
 document.addEventListener('DOMContentLoaded', () => {
     renderContacts()
 
+    document.querySelector('.add-contact').addEventListener('click', function(){
+      document.querySelector('#form-wrapper').className -= 'invisible'
+      document.querySelector('#add-contact-wrapper').className += 'invisible'
+    })
+
     // Select form object from the DOM
     const addContactForm = document.querySelector('.new-contact-form')
 
-    
-  
     // Register an event to listen for form submission
     addContactForm.addEventListener('submit', event => {
       // Disable default behavior when submitting form
@@ -56,7 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const storage = window.localStorage
       // const contacts = JSON.parse(storage.getItem('contacts'))
 
-
+      document.querySelector('#form-wrapper').className -= 'invisible'
+      document.querySelector('#add-contact-wrapper').className += 'invisible'
+      
       // Get all inputs elements from the form
       const {
         name,
