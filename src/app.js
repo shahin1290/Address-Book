@@ -11,13 +11,13 @@ const renderContacts = () => {
 
     // render the contacts
     const ul = document.createElement('div')
-    ul.className += 'flex'
+    ul.className += 'flex justify-start'
     // For every contact in our array of contacts, we will
     // create a li element that will contain a card with
     // all the information of the contact
     contacts.forEach(contact => {
       let li = document.createElement('div')
-      li.className += 'flex-1'
+      li.className += 'flex-1 p-5'
       li.innerHTML = `
         <div class="card max-w-sm rounded overflow-hidden shadow-lg">
           <div class="content">
