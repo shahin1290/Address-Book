@@ -11,18 +11,24 @@
 
 <body>
   
-  <header class="flex border-solid border-b border-black ">
-    <h1 class="flex-1 text-center p-10 m-5  text-5xl">Address Book</h1>
+  <header class="w-full md:flex justify-center border-solid border-b border-black ">
+    <h1 class=" p-10  text-5xl">Address Book</h1>
   </header>
-  
-  <button class="add-contact bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border border-grey-light rounded shadow">Add Contact</button>
 
-  <div class="contact-list  flex-row h-auto p-10 border border-solid border-black ">
+  <div class="contact-list  flex-row h-auto p-10 border-b border-solid border-black ">
   </div>
 
+  <div class="w-full md:flex m-10 flex justify-center  ">
+    <button class="add-contact bg-blue hover:bg-blue-dark text-white text-3xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ">Add Contact</button>
+  </div>
+  
+  
 
-  <div class="w-full md:flex m-10 flex justify-center">
-    <form class="new-contact-form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="#">
+ 
+
+
+  <div class="w-full md:flex m-10 flex justify-center  ">
+    <form class="new-contact-form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border border-solid border-grey-light" action="#">
 
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">

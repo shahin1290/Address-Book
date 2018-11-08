@@ -19,7 +19,7 @@ const renderContacts = () => {
       let li = document.createElement('div')
       li.className += ' p-5 border-l-4 border-solid border-black hover:bg-grey-darker m-5'
       li.innerHTML = `
-        <div class="card w-125px rounded overflow-hidden shadow-lg bg-grey">
+        <div class="card w-125px min-h-80px rounded overflow-auto shadow-lg bg-grey-lighter">
           <div class="content m-1 ">
             <h1 class= "m-1 underline">${ contact.name }</h1>
             <h2 class= "m-1">${ contact.company }</h2>
