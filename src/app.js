@@ -27,8 +27,14 @@ const renderContacts = () => {
             ${ contact.email } | 
             <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
           </div>
+          
         </div>
+        
      `
+     let button = document.createElement('button');
+      button.className += 'delete-task';
+      button.innerHTML ='X';
+      li.appendChild(button)
       // Add the contact's li to the unordered list we created earlier
       ul.appendChild(li)
     })
@@ -43,11 +49,22 @@ const renderContacts = () => {
 document.addEventListener('DOMContentLoaded', () => {
     renderContacts()
 
+    
+
     document.querySelector('.add-contact').addEventListener('click', function(){
       document.querySelector('#form-wrapper').className -= 'invisible'
       document.querySelector('#add-contact-wrapper').className = 'invisible'
     })
 
+    let delete_button = document.querySelector('.contact-list')
+
+    
+
+     delete_button.addEventListener('click',event => {
+      console.log('button clicked')
+      event.target.parentNode.remove()
+      
+    }) 
     // Select form object from the DOM
     const addContactForm = document.querySelector('.new-contact-form')
 

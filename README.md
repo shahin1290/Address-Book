@@ -1,11 +1,11 @@
 # Address Book [es2015]
-### This app was built to allow the users to managae the contact details. Some of the features are:
+### This app was built to allow the users to manage the contact details. Some of the features are:
     - Ability to add new contacts
     - View a list of existing contacts
-    - An appealing design that allows ease of navigation
+    - Material design that allows ease of navigation
 
 ## Technology Stack
-This a web-based application. This means the user would need to access this from a browser. The application consists of a user interface built with HTML with Taiwind CSS library to make it look good. The logic is written using pure Javascript with no additional libraries.
+This a web-based application. This means the user would need to access this from a browser. The application consists of a user interface built with HTML with Taiwind CSS library used for styling. The logic is written using vanilla Javascript with no additional libraries.
 
 We have some acceptance tests (also known as end-to-end testing) done while building this application.
 
@@ -14,7 +14,7 @@ We have some acceptance tests (also known as end-to-end testing) done while buil
 - [Md Shahin Patowary](https://github.com/shahin1290/)
 
 ## Deployment
-- [Deployment by Aitya](https://kianaditya.github.io/Address_book/)
+- [Deployment by Aditya](https://kianaditya.github.io/Address_book/)
 - [Deployment by Shahin](https://shahin1290.github.io/Address-Book/)
 
 ## Installation
