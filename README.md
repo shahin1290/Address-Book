@@ -10,12 +10,12 @@ This a web-based application. This means the user would need to access this from
 We have some acceptance tests (also known as end-to-end testing) done while building this application.
 
 ## Authors
-    - Aditya Naik - https://github.com/kianaditya
-    - Md Shahin Patowary - https://github.com/shahin1290/ 
+- [Aditya Naik](https://github.com/kianaditya)
+- [Md Shahin Patowary](https://github.com/shahin1290/)
 
 ## Deployment
-    - https://kianaditya.github.io/Address_book/
-    - https://shahin1290.github.io/
+- [Deployment by Aitya](https://kianaditya.github.io/Address_book/)
+- [Deployment by Shahin](https://shahin1290.github.io/)
 
 ## Installation
     - yarn install - to install all the dependencies
