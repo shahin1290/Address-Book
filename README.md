@@ -15,7 +15,7 @@ We have some acceptance tests (also known as end-to-end testing) done while buil
 
 ## Deployment
 - [Deployment by Aitya](https://kianaditya.github.io/Address_book/)
-- [Deployment by Shahin](https://shahin1290.github.io/)
+- [Deployment by Shahin](https://shahin1290.github.io/Address-Book/)
 
 ## Installation
     - yarn install - to install all the dependencies
